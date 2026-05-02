@@ -2,22 +2,46 @@ const projects = [
   {
     title: "Procurement Risk API",
     description:
-      "A backend API for invoice analysis, risk signals, duplicate detection, analytics, and JWT-protected routes.",
-    tech: ["FastAPI", "PostgreSQL", "SQLAlchemy", "JWT", "Python"],
+      "A FastAPI backend for invoice data retrieval, risk detection, analytics, CSV ingestion, and secure API access.",
+    features:
+      "Built features: JWT authentication with OAuth2 Bearer tokens, bcrypt password hashing, protected routes, PostgreSQL models, CSV-to-database ingestion, duplicate invoice detection, below-threshold checks, weekend transaction signals, analytics summary endpoints, and Swagger/OpenAPI documentation.",
+    tech: [
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "JWT",
+      "OAuth2",
+      "bcrypt",
+      "Swagger",
+      "Python",
+    ],
     link: "https://github.com/MoAz06/procurement-risk-api",
   },
   {
-    title: "Real-time Chat App",
+    title: "Flask Real-Time Chat Application",
     description:
-      "A Flask-based web application with authentication, database models, user sessions, and real-time messaging features.",
-    tech: ["Flask", "Python", "SQLAlchemy", "WebSockets"],
+      "A real-time web application built with Flask, Flask-SocketIO, authentication, database-backed users, and structured backend routes.",
+    features:
+      "Built features: user registration, login/logout, session-based authentication, password hashing, database models, Flask routes, WebSocket-based real-time communication, and MVC-style project structure.",
+    tech: ["Flask", "Flask-SocketIO", "Python", "SQLAlchemy", "WebSockets"],
     link: "https://github.com/MoAz06/chatapp-pt2",
+  },
+  {
+    title: "Data Processing Pipelines",
+    description:
+      "A collection of data processing scripts for extracting, transforming, filtering, and handling large datasets efficiently.",
+    features:
+      "Built features: Python data processing scripts, Unix command-line pipelines, stream processing, filtering logic, text processing with grep/awk/sort, and efficient handling of large files.",
+    tech: ["Python", "Bash", "Unix Tools", "grep", "awk", "sort"],
+    link: "https://github.com/MoAz06/data-processing-pipelines",
   },
   {
     title: "Backtracking Scheduler",
     description:
-      "A C++ scheduling algorithm that uses constraint checking and backtracking to generate valid competition schedules.",
-    tech: ["C++", "Algorithms", "Backtracking", "Constraint Solving"],
+      "A C++ constraint-solving project that generates valid competition schedules using recursive backtracking and pruning.",
+    features:
+      "Built features: recursive backtracking, constraint validation, pruning, opponent tracking, home/away balancing, country checks, schedule scoring, and custom data structures for efficient state tracking.",
+    tech: ["C++", "Algorithms", "Backtracking", "Pruning", "Constraint Solving"],
     link: "https://github.com/MoAz06/algorithms-backtracking-champions-league",
   },
 ];
@@ -26,13 +50,40 @@ const skills = [
   "Python",
   "FastAPI",
   "Flask",
+  "Flask-SocketIO",
   "SQL",
   "PostgreSQL",
+  "SQLAlchemy",
   "C++",
   "Git",
   "Linux",
+  "Bash",
+  "JWT",
+  "OAuth2",
+  "bcrypt",
   "REST APIs",
-  "Backend Development",
+  "Swagger / OpenAPI",
+  "Backend Architecture",
+  "Data Pipelines",
+  "Algorithm Design",
+];
+
+const services = [
+  {
+    title: "REST API Development",
+    description:
+      "Small Python backends using FastAPI or Flask, with clean routes, JSON responses, database integration, and API documentation.",
+  },
+  {
+    title: "Backend Bug Fixing",
+    description:
+      "Debugging route errors, authentication issues, database problems, deployment problems, and broken backend logic.",
+  },
+  {
+    title: "Data Processing Scripts",
+    description:
+      "CSV ingestion, filtering, transformation scripts, automation workflows, and simple data validation logic.",
+  },
 ];
 
 export default function Home() {
@@ -40,7 +91,7 @@ export default function Home() {
     <main className="min-h-screen bg-zinc-950 text-zinc-100">
       <section className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-20">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-zinc-400">
-          Backend Developer Portfolio
+          Python Backend Developer
         </p>
 
         <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
@@ -48,8 +99,14 @@ export default function Home() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-          Computer Science student focused on backend development, REST APIs,
-          databases, automation, and clean server-side logic.
+          Computer Science student at Leiden University focused on backend
+          development, REST APIs, databases, automation, and algorithmic problem
+          solving.
+        </p>
+
+        <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-400">
+          I build and fix small Python backends: FastAPI and Flask APIs,
+          authentication, database logic, CSV pipelines, and backend bugs.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
@@ -59,6 +116,7 @@ export default function Home() {
           >
             Contact me
           </a>
+
           <a
             href="https://github.com/MoAz06"
             target="_blank"
@@ -72,32 +130,20 @@ export default function Home() {
 
       <section className="border-t border-zinc-800 px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white">What I build</h2>
+          <h2 className="text-3xl font-semibold text-white">What I can help with</h2>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
-              <h3 className="font-semibold text-white">REST APIs</h3>
-              <p className="mt-3 text-sm leading-6 text-zinc-400">
-                Small backend APIs using FastAPI or Flask with clean routes,
-                JSON responses, authentication, and database integration.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
-              <h3 className="font-semibold text-white">Backend Fixes</h3>
-              <p className="mt-3 text-sm leading-6 text-zinc-400">
-                Debugging Python backend errors, fixing routes, database issues,
-                authentication problems, and deployment problems.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
-              <h3 className="font-semibold text-white">Automation</h3>
-              <p className="mt-3 text-sm leading-6 text-zinc-400">
-                Data processing scripts, CSV pipelines, simple automation tools,
-                and backend logic for practical workflows.
-              </p>
-            </div>
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6"
+              >
+                <h3 className="font-semibold text-white">{service.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-zinc-400">
+                  {service.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -115,11 +161,19 @@ export default function Home() {
                 rel="noreferrer"
                 className="block rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 transition hover:border-zinc-500"
               >
-                <h3 className="text-xl font-semibold text-white">
-                  {project.title}
-                </h3>
+                <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+                  <h3 className="text-xl font-semibold text-white">
+                    {project.title}
+                  </h3>
+                  <span className="text-sm text-zinc-500">View code →</span>
+                </div>
+
                 <p className="mt-3 max-w-3xl text-sm leading-6 text-zinc-400">
                   {project.description}
+                </p>
+
+                <p className="mt-3 max-w-4xl text-sm leading-6 text-zinc-300">
+                  {project.features}
                 </p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
@@ -158,19 +212,32 @@ export default function Home() {
       <section className="border-t border-zinc-800 px-6 py-20">
         <div className="mx-auto max-w-5xl rounded-3xl border border-zinc-800 bg-zinc-900/60 p-8 md:p-10">
           <h2 className="text-3xl font-semibold text-white">
-            Need a small backend or API fixed?
+            Need a Python backend or API fixed?
           </h2>
+
           <p className="mt-4 max-w-2xl leading-7 text-zinc-400">
-            I can help with Python backend tasks, Flask or FastAPI APIs,
-            database logic, bug fixing, and small automation scripts.
+            Send me the issue, feature request, or API idea. I can help with
+            Flask, FastAPI, PostgreSQL, authentication, backend bugs, and small
+            automation scripts.
           </p>
 
-          <a
-            href="mailto:mohamedazahrioui2006@gmail.com"
-            className="mt-8 inline-block rounded-full bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
-          >
-            Send an email
-          </a>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="mailto:mohamedazahrioui2006@gmail.com"
+              className="rounded-full bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
+            >
+              Send an email
+            </a>
+
+            <a
+              href="https://github.com/MoAz06"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-zinc-700 px-5 py-3 text-sm font-medium text-white transition hover:border-zinc-400"
+            >
+              View GitHub
+            </a>
+          </div>
         </div>
       </section>
 
