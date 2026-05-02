@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,12 +18,14 @@ export const metadata = {
   description:
     "Backend-focused Computer Science student building Python APIs, Flask and FastAPI backends, database-driven applications, and automation tools.",
 };
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
