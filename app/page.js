@@ -1,65 +1,182 @@
-import Image from "next/image";
+const projects = [
+  {
+    title: "Procurement Risk API",
+    description:
+      "A backend API for invoice analysis, risk signals, duplicate detection, analytics, and JWT-protected routes.",
+    tech: ["FastAPI", "PostgreSQL", "SQLAlchemy", "JWT", "Python"],
+    link: "https://github.com/MoAz06/procurement-risk-api",
+  },
+  {
+    title: "Real-time Chat App",
+    description:
+      "A Flask-based web application with authentication, database models, user sessions, and real-time messaging features.",
+    tech: ["Flask", "Python", "SQLAlchemy", "WebSockets"],
+    link: "https://github.com/MoAz06/chatapp-pt2",
+  },
+  {
+    title: "Backtracking Scheduler",
+    description:
+      "A C++ scheduling algorithm that uses constraint checking and backtracking to generate valid competition schedules.",
+    tech: ["C++", "Algorithms", "Backtracking", "Constraint Solving"],
+    link: "https://github.com/MoAz06/algorithms-backtracking-champions-league",
+  },
+];
+
+const skills = [
+  "Python",
+  "FastAPI",
+  "Flask",
+  "SQL",
+  "PostgreSQL",
+  "C++",
+  "Git",
+  "Linux",
+  "REST APIs",
+  "Backend Development",
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-zinc-950 text-zinc-100">
+      <section className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-20">
+        <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-zinc-400">
+          Backend Developer Portfolio
+        </p>
+
+        <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
+          Mohamed Azahrioui
+        </h1>
+
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
+          Computer Science student focused on backend development, REST APIs,
+          databases, automation, and clean server-side logic.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href="mailto:mohamedazahrioui2006@gmail.com"
+            className="rounded-full bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
+          >
+            Contact me
+          </a>
+          <a
+            href="https://github.com/MoAz06"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-zinc-700 px-5 py-3 text-sm font-medium text-white transition hover:border-zinc-400"
+          >
+            GitHub
+          </a>
+        </div>
+      </section>
+
+      <section className="border-t border-zinc-800 px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-3xl font-semibold text-white">What I build</h2>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
+              <h3 className="font-semibold text-white">REST APIs</h3>
+              <p className="mt-3 text-sm leading-6 text-zinc-400">
+                Small backend APIs using FastAPI or Flask with clean routes,
+                JSON responses, authentication, and database integration.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
+              <h3 className="font-semibold text-white">Backend Fixes</h3>
+              <p className="mt-3 text-sm leading-6 text-zinc-400">
+                Debugging Python backend errors, fixing routes, database issues,
+                authentication problems, and deployment problems.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
+              <h3 className="font-semibold text-white">Automation</h3>
+              <p className="mt-3 text-sm leading-6 text-zinc-400">
+                Data processing scripts, CSV pipelines, simple automation tools,
+                and backend logic for practical workflows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-zinc-800 px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-3xl font-semibold text-white">Projects</h2>
+
+          <div className="mt-8 grid gap-5">
+            {projects.map((project) => (
+              <a
+                key={project.title}
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="block rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 transition hover:border-zinc-500"
+              >
+                <h3 className="text-xl font-semibold text-white">
+                  {project.title}
+                </h3>
+                <p className="mt-3 max-w-3xl text-sm leading-6 text-zinc-400">
+                  {project.description}
+                </p>
+
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.tech.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-300"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-zinc-800 px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-3xl font-semibold text-white">Skills</h2>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full bg-zinc-900 px-4 py-2 text-sm text-zinc-300"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-zinc-800 px-6 py-20">
+        <div className="mx-auto max-w-5xl rounded-3xl border border-zinc-800 bg-zinc-900/60 p-8 md:p-10">
+          <h2 className="text-3xl font-semibold text-white">
+            Need a small backend or API fixed?
+          </h2>
+          <p className="mt-4 max-w-2xl leading-7 text-zinc-400">
+            I can help with Python backend tasks, Flask or FastAPI APIs,
+            database logic, bug fixing, and small automation scripts.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:mohamedazahrioui2006@gmail.com"
+            className="mt-8 inline-block rounded-full bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            Send an email
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <footer className="border-t border-zinc-800 px-6 py-8 text-center text-sm text-zinc-500">
+        © 2026 Mohamed Azahrioui. Built with Next.js and deployed on Vercel.
+      </footer>
+    </main>
   );
 }
