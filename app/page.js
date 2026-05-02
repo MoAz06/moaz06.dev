@@ -1,50 +1,5 @@
-const projects = [
-  {
-    title: "Procurement Risk API",
-    description:
-      "A FastAPI backend for invoice data retrieval, risk detection, analytics, CSV ingestion, and secure API access.",
-    features:
-      "Built features: JWT authentication with OAuth2 Bearer tokens, bcrypt password hashing, protected routes, PostgreSQL models, CSV-to-database ingestion, duplicate invoice detection, below-threshold checks, weekend transaction signals, analytics summary endpoints, and Swagger/OpenAPI documentation.",
-    tech: [
-      "FastAPI",
-      "PostgreSQL",
-      "SQLAlchemy",
-      "JWT",
-      "OAuth2",
-      "bcrypt",
-      "Swagger",
-      "Python",
-    ],
-    link: "https://github.com/MoAz06/procurement-risk-api",
-  },
-  {
-    title: "Flask Real-Time Chat Application",
-    description:
-      "A real-time web application built with Flask, Flask-SocketIO, authentication, database-backed users, and structured backend routes.",
-    features:
-      "Built features: user registration, login/logout, session-based authentication, password hashing, database models, Flask routes, WebSocket-based real-time communication, and MVC-style project structure.",
-    tech: ["Flask", "Flask-SocketIO", "Python", "SQLAlchemy", "WebSockets"],
-    link: "https://github.com/MoAz06/chatapp-pt2",
-  },
-  {
-    title: "Data Processing Pipelines",
-    description:
-      "A collection of data processing scripts for extracting, transforming, filtering, and handling large datasets efficiently.",
-    features:
-      "Built features: Python data processing scripts, Unix command-line pipelines, stream processing, filtering logic, text processing with grep/awk/sort, and efficient handling of large files.",
-    tech: ["Python", "Bash", "Unix Tools", "grep", "awk", "sort"],
-    link: "https://github.com/MoAz06/data-processing-pipelines",
-  },
-  {
-    title: "Backtracking Scheduler",
-    description:
-      "A C++ constraint-solving project that generates valid competition schedules using recursive backtracking and pruning.",
-    features:
-      "Built features: recursive backtracking, constraint validation, pruning, opponent tracking, home/away balancing, country checks, schedule scoring, and custom data structures for efficient state tracking.",
-    tech: ["C++", "Algorithms", "Backtracking", "Pruning", "Constraint Solving"],
-    link: "https://github.com/MoAz06/algorithms-backtracking-champions-league",
-  },
-];
+import Link from "next/link";
+import { projects } from "./data/projects";
 
 const skills = [
   "Python",
@@ -130,7 +85,9 @@ export default function Home() {
 
       <section className="border-t border-zinc-800 px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white">What I can help with</h2>
+          <h2 className="text-3xl font-semibold text-white">
+            What I can help with
+          </h2>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {services.map((service) => (
@@ -154,18 +111,24 @@ export default function Home() {
 
           <div className="mt-8 grid gap-5">
             {projects.map((project) => (
-              <a
-                key={project.title}
-                href={project.link}
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                key={project.slug}
+                href={`/projects/${project.slug}`}
                 className="block rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 transition hover:border-zinc-500"
               >
                 <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
-                  <h3 className="text-xl font-semibold text-white">
-                    {project.title}
-                  </h3>
-                  <span className="text-sm text-zinc-500">View code →</span>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">
+                      {project.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-zinc-500">
+                      {project.year}
+                    </p>
+                  </div>
+
+                  <span className="text-sm text-zinc-500">
+                    View case study →
+                  </span>
                 </div>
 
                 <p className="mt-3 max-w-3xl text-sm leading-6 text-zinc-400">
@@ -173,11 +136,11 @@ export default function Home() {
                 </p>
 
                 <p className="mt-3 max-w-4xl text-sm leading-6 text-zinc-300">
-                  {project.features}
+                  Built features: {project.builtFeatures.slice(0, 4).join(", ")}.
                 </p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tech.map((item) => (
+                  {project.tech.slice(0, 8).map((item) => (
                     <span
                       key={item}
                       className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-300"
@@ -186,7 +149,7 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
