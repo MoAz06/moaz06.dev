@@ -1,0 +1,164 @@
+%PDF-1.4
+%“Œ‹ž
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 7707 >>
+stream
+0.105 0.227 0.361 rg
+0.00 737.89 595.28 104.00 re f
+1.000 1.000 1.000 rg
+BT /F2 25.50 Tf 28.00 TL 1 0 0 1 48.00 783.00 Tm (Mohamed Azahrioui) Tj ET
+0.820 0.890 0.960 rg
+BT /F1 10.60 Tf 12.00 TL 1 0 0 1 48.00 759.00 Tm (Backend Developer | Computer Science Student at Leiden University) Tj ET
+1.000 1.000 1.000 rg
+BT /F1 8.30 Tf 10.00 TL 1 0 0 1 463.28 789.00 Tm (The Hague, Netherlands) Tj ET
+1.000 1.000 1.000 rg
+BT /F1 8.30 Tf 10.00 TL 1 0 0 1 492.83 776.00 Tm (+31 6 28504804) Tj ET
+1.000 1.000 1.000 rg
+BT /F1 8.30 Tf 10.00 TL 1 0 0 1 430.08 763.00 Tm (mohamedazahrioui2006@gmail.com) Tj ET
+1.000 1.000 1.000 rg
+BT /F1 8.30 Tf 10.00 TL 1 0 0 1 431.91 750.00 Tm (github.com/MoAz06 | moaz06.dev) Tj ET
+0.180 0.430 0.650 rg
+BT /F2 9.70 Tf 11.00 TL 1 0 0 1 48.00 718.89 Tm (PROFILE) Tj ET
+0.780 0.780 0.780 RG
+0.60 w 48.00 715.39 m 547.28 715.39 l S
+0.000 0.000 0.000 rg
+BT /F1 8.35 Tf 9.95 TL 1 0 0 1 48.00 704.89 Tm (Backend-focused Computer Science student building Python APIs, automation tools, and data workflows for real users. Experienced with) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.35 Tf 9.95 TL 1 0 0 1 48.00 694.94 Tm (FastAPI, Flask, PostgreSQL, SQLite, SQLAlchemy ORM, authentication, Excel exports, and deployment-ready configuration. Strong at) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.35 Tf 9.95 TL 1 0 0 1 48.00 684.99 Tm (turning business rules into reliable backend systems.) Tj ET
+0.180 0.430 0.650 rg
+BT /F2 9.70 Tf 11.00 TL 1 0 0 1 48.00 668.04 Tm (EXPERIENCE) Tj ET
+0.780 0.780 0.780 RG
+0.60 w 48.00 664.54 m 547.28 664.54 l S
+0.000 0.000 0.000 rg
+BT /F2 8.80 Tf 10.00 TL 1 0 0 1 48.00 654.04 Tm (Freelance Backend Developer - Fiverr) Tj ET
+0.350 0.350 0.350 rg
+BT /F3 8.25 Tf 9.20 TL 1 0 0 1 497.78 654.04 Tm (2025-Present) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 642.54 Tm (- Built Python automation scripts and backend tools for external clients, translating business requirements into maintainable workflows.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 633.19 Tm (- Developed API integrations, data processing pipelines, Excel exports, Mail Merge-ready datasets, and operations tooling.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 623.84 Tm (- Delivered e-commerce automation with local persistence, duplicate prevention, and configurable production settings.) Tj ET
+0.180 0.430 0.650 rg
+BT /F2 9.70 Tf 11.00 TL 1 0 0 1 48.00 608.99 Tm (PROJECTS) Tj ET
+0.780 0.780 0.780 RG
+0.60 w 48.00 605.49 m 547.28 605.49 l S
+0.000 0.000 0.000 rg
+BT /F2 8.80 Tf 10.00 TL 1 0 0 1 48.00 594.99 Tm (Bol.com to DPD & Mail Merge Export Tool) Tj ET
+0.350 0.350 0.350 rg
+BT /F3 8.05 Tf 9.00 TL 1 0 0 1 531.18 594.99 Tm (2026) Tj ET
+0.350 0.350 0.350 rg
+BT /F3 7.75 Tf 8.80 TL 1 0 0 1 48.00 584.49 Tm (Python, SQLite, openpyxl, Excel generation, Bol.com order processing, Mail Merge) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 574.19 Tm (- Built a Python automation tool for Bol.com orders, DPD Excel exports, and Word Mail Merge customer data.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 564.84 Tm (- Persisted orders in SQLite, filtered orders older than 7 days, marked exported orders, and added intentional re-export support.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 555.49 Tm (- Added safeguards preventing mock data from contaminating production data; designed workflow around customer requirements.) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 8.80 Tf 10.00 TL 1 0 0 1 48.00 540.14 Tm (Procurement Risk API) Tj ET
+0.350 0.350 0.350 rg
+BT /F3 8.05 Tf 9.00 TL 1 0 0 1 511.05 540.14 Tm (2025-2026) Tj ET
+0.350 0.350 0.350 rg
+BT /F3 7.75 Tf 8.80 TL 1 0 0 1 48.00 529.64 Tm (FastAPI, PostgreSQL, SQLAlchemy ORM, JWT, OAuth2, bcrypt, Swagger/OpenAPI) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 519.34 Tm (- Built production-style REST API for invoice retrieval, CSV ingestion, risk detection, analytics, and generated API docs.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 509.99 Tm (- Designed PostgreSQL data model with SQLAlchemy and protected routes using JWT auth, OAuth2 Bearer tokens, and bcrypt hashing.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 500.64 Tm (- Implemented risk rules for duplicate invoices, threshold checks, weekend transactions, and high-severity summary analytics.) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 8.80 Tf 10.00 TL 1 0 0 1 48.00 485.29 Tm (Flask Real-Time Chat App) Tj ET
+0.350 0.350 0.350 rg
+BT /F3 8.05 Tf 9.00 TL 1 0 0 1 511.05 485.29 Tm (2025-2026) Tj ET
+0.350 0.350 0.350 rg
+BT /F3 7.75 Tf 8.80 TL 1 0 0 1 48.00 474.79 Tm (Flask, Flask-SocketIO, WebSockets, session authentication) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 464.49 Tm (- Built a real-time web app with structured routes, session authentication, MVC-style architecture, and WebSocket user sessions.) Tj ET
+0.000 0.000 0.000 rg
+BT /F2 8.80 Tf 10.00 TL 1 0 0 1 48.00 449.14 Tm (Additional Projects) Tj ET
+0.350 0.350 0.350 rg
+BT /F3 8.05 Tf 9.00 TL 1 0 0 1 511.05 449.14 Tm (2025-2026) Tj ET
+0.350 0.350 0.350 rg
+BT /F3 7.75 Tf 8.80 TL 1 0 0 1 48.00 438.64 Tm (Python, Bash, Unix tools, C++, algorithms) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 428.34 Tm (- Built data processing pipelines using Python, grep, awk, sort, and custom extraction/filtering scripts.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.35 TL 1 0 0 1 56.00 418.99 Tm (- Implemented C++ backtracking scheduler with pruning and optimized data structures to reduce search complexity.) Tj ET
+0.180 0.430 0.650 rg
+BT /F2 9.70 Tf 11.00 TL 1 0 0 1 48.00 403.64 Tm (EDUCATION) Tj ET
+0.780 0.780 0.780 RG
+0.60 w 48.00 400.14 m 547.28 400.14 l S
+0.000 0.000 0.000 rg
+BT /F2 8.80 Tf 10.00 TL 1 0 0 1 48.00 389.64 Tm (BSc Computer Science - Leiden University, Leiden) Tj ET
+0.350 0.350 0.350 rg
+BT /F3 8.05 Tf 9.00 TL 1 0 0 1 498.98 389.64 Tm (2025-Present) Tj ET
+0.180 0.430 0.650 rg
+BT /F2 9.70 Tf 11.00 TL 1 0 0 1 48.00 371.64 Tm (SKILLS) Tj ET
+0.780 0.780 0.780 RG
+0.60 w 48.00 368.14 m 547.28 368.14 l S
+0.180 0.430 0.650 rg
+BT /F2 7.95 Tf 9.25 TL 1 0 0 1 48.00 357.64 Tm (Programming:) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.25 TL 1 0 0 1 168.00 357.64 Tm (Python, C++, SQL) Tj ET
+0.180 0.430 0.650 rg
+BT /F2 7.95 Tf 9.25 TL 1 0 0 1 48.00 347.29 Tm (Backend & APIs:) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.25 TL 1 0 0 1 168.00 347.29 Tm (FastAPI, Flask, REST APIs, API integrations, JWT, OAuth2, bcrypt, Swagger/OpenAPI, Postman) Tj ET
+0.180 0.430 0.650 rg
+BT /F2 7.95 Tf 9.25 TL 1 0 0 1 48.00 336.94 Tm (Databases:) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.25 TL 1 0 0 1 168.00 336.94 Tm (PostgreSQL, SQLite, SQLAlchemy ORM) Tj ET
+0.180 0.430 0.650 rg
+BT /F2 7.95 Tf 9.25 TL 1 0 0 1 48.00 326.59 Tm (Automation & Data:) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.25 TL 1 0 0 1 168.00 326.59 Tm (Excel generation, Mail Merge workflows, data export pipelines, CSV ingestion, business rule logic) Tj ET
+0.180 0.430 0.650 rg
+BT /F2 7.95 Tf 9.25 TL 1 0 0 1 48.00 316.24 Tm (Deployment & Tools:) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.25 TL 1 0 0 1 168.00 316.24 Tm (Railway, environment variables, production configuration, Linux/WSL, Bash, Git, Uvicorn) Tj ET
+0.180 0.430 0.650 rg
+BT /F2 7.95 Tf 9.25 TL 1 0 0 1 48.00 305.89 Tm (E-commerce:) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.25 TL 1 0 0 1 168.00 305.89 Tm (Bol.com order processing, DPD shipping exports, shipping export workflows) Tj ET
+0.180 0.430 0.650 rg
+BT /F2 7.95 Tf 9.25 TL 1 0 0 1 48.00 295.54 Tm (Languages:) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 7.95 Tf 9.25 TL 1 0 0 1 168.00 295.54 Tm (Dutch \(native\), English \(native\)) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 595.2756 841.8898] /Contents 4 0 R /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000319 00000 n 
+0000008078 00000 n 
+0000008234 00000 n 
+0000008291 00000 n 
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+8340
+%%EOF

@@ -1,8 +1,48 @@
 export const projects = [
   {
+    slug: "bol-dpd-mail-merge-export-tool",
+    title: "Bol.com to DPD & Mail Merge Export Tool",
+    year: "2026",
+    type: "Client automation",
+    description:
+      "A Python operations tool that turns Bol.com order data into DPD Excel exports and Word Mail Merge customer datasets.",
+    problem:
+      "A client needed a repeatable way to process Bol.com orders without manually preparing shipping spreadsheets, customer records, and re-export rules every time.",
+    builtFeatures: [
+      "Bol.com order processing workflow",
+      "DPD-ready Excel export generation",
+      "Word Mail Merge-ready customer dataset export",
+      "SQLite persistence for imported and exported orders",
+      "Duplicate prevention for already-exported orders",
+      "Configurable filtering for orders older than 7 days",
+      "Intentional re-export support for controlled reruns",
+      "Production safeguards to keep mock data out of live exports",
+      "Customer-focused workflow decisions based on business rules",
+    ],
+    outcomes: [
+      "Reduced repetitive order administration",
+      "Made export history explicit through local persistence",
+      "Protected production workflows from test-data contamination",
+    ],
+    endpoints: [],
+    tech: [
+      "Python",
+      "SQLite",
+      "openpyxl",
+      "Excel generation",
+      "Mail Merge",
+      "Bol.com order processing",
+      "DPD exports",
+      "Business rule logic",
+    ],
+    github: null,
+    repoLabel: "Private client project",
+  },
+  {
     slug: "procurement-risk-api",
     title: "Procurement Risk API",
     year: "2025-2026",
+    type: "Backend API",
     description:
       "A FastAPI backend for invoice data retrieval, risk detection, analytics, CSV ingestion, and secure API access.",
     problem:
@@ -23,6 +63,11 @@ export const projects = [
       "Analytics summary endpoint for invoices, risk signals, and severity counts",
       "Modular backend structure with routers, services, and models",
       "Swagger/OpenAPI documentation through /docs",
+    ],
+    outcomes: [
+      "Turned invoice risk rules into inspectable API behavior",
+      "Kept data access, auth, risk checks, and analytics separated",
+      "Documented the backend automatically through OpenAPI",
     ],
     endpoints: [
       "GET /invoices",
@@ -49,6 +94,7 @@ export const projects = [
     slug: "flask-real-time-chat",
     title: "Flask Real-Time Chat Application",
     year: "2025-2026",
+    type: "Realtime web app",
     description:
       "A real-time web application built with Flask, Flask-SocketIO, authentication, session handling, and structured backend routes.",
     problem:
@@ -62,6 +108,10 @@ export const projects = [
       "Database-backed user models",
       "Managed user sessions",
       "MVC-style project structure",
+    ],
+    outcomes: [
+      "Connected authenticated users through realtime messaging",
+      "Kept routing, session state, and socket events organized",
     ],
     endpoints: [],
     tech: [
@@ -79,6 +129,7 @@ export const projects = [
     slug: "data-processing-pipelines",
     title: "Data Processing Pipelines",
     year: "2025-2026",
+    type: "Automation scripts",
     description:
       "A collection of data processing scripts for extracting, transforming, filtering, and handling large datasets efficiently.",
     problem:
@@ -91,6 +142,10 @@ export const projects = [
       "Text processing with grep, awk, and sort",
       "Efficient file handling without loading everything manually",
     ],
+    outcomes: [
+      "Processed structured files with lightweight command-line workflows",
+      "Avoided loading large datasets fully into memory where possible",
+    ],
     endpoints: [],
     tech: ["Python", "Bash", "Unix Tools", "grep", "awk", "sort"],
     github: "https://github.com/MoAz06/data-processing-pipelines",
@@ -99,6 +154,7 @@ export const projects = [
     slug: "backtracking-scheduler",
     title: "Backtracking Scheduler",
     year: "2025-2026",
+    type: "Algorithms",
     description:
       "A C++ constraint-solving project that generates valid competition schedules using recursive backtracking and pruning.",
     problem:
@@ -112,6 +168,10 @@ export const projects = [
       "Country-based constraint checks",
       "Schedule scoring",
       "Custom data structures for efficient state tracking",
+    ],
+    outcomes: [
+      "Reduced brute-force search with pruning",
+      "Modeled schedule validity through explicit constraints",
     ],
     endpoints: [],
     tech: [

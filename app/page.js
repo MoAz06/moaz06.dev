@@ -1,153 +1,282 @@
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "./data/projects";
 
-const skills = [
-  "Python",
-  "FastAPI",
-  "Flask",
-  "Flask-SocketIO",
-  "SQL",
-  "PostgreSQL",
-  "SQLAlchemy",
-  "C++",
-  "Git",
-  "Linux",
-  "Bash",
-  "JWT",
-  "OAuth2",
-  "bcrypt",
-  "REST APIs",
-  "Swagger / OpenAPI",
-  "Backend Architecture",
-  "Data Pipelines",
-  "Algorithm Design",
+const focusAreas = [
+  {
+    title: "Backend systems",
+    description:
+      "FastAPI and Flask backends with clear routes, authentication, database models, and OpenAPI documentation.",
+  },
+  {
+    title: "Automation tools",
+    description:
+      "Python workflows for exports, order processing, Mail Merge datasets, CSV ingestion, and repeatable operations.",
+  },
+  {
+    title: "Data workflows",
+    description:
+      "SQLite and PostgreSQL backed pipelines that keep business rules explicit and production behavior predictable.",
+  },
 ];
 
-const services = [
+const skillGroups = [
   {
-    title: "REST API Development",
-    description:
-      "Small Python backends using FastAPI or Flask, with clean routes, JSON responses, database integration, and API documentation.",
+    title: "Programming",
+    items: ["Python", "C++", "SQL", "Bash"],
   },
   {
-    title: "Backend Bug Fixing",
-    description:
-      "Debugging route errors, authentication issues, database problems, deployment problems, and broken backend logic.",
+    title: "Backend and APIs",
+    items: [
+      "FastAPI",
+      "Flask",
+      "REST APIs",
+      "API integrations",
+      "JWT",
+      "OAuth2",
+      "bcrypt",
+      "Swagger / OpenAPI",
+      "Postman",
+    ],
   },
   {
-    title: "Data Processing Scripts",
-    description:
-      "CSV ingestion, filtering, transformation scripts, automation workflows, and simple data validation logic.",
+    title: "Data and automation",
+    items: [
+      "PostgreSQL",
+      "SQLite",
+      "SQLAlchemy ORM",
+      "openpyxl",
+      "Excel generation",
+      "Mail Merge",
+      "CSV ingestion",
+      "Business rule logic",
+    ],
+  },
+  {
+    title: "Deployment and tools",
+    items: [
+      "Railway",
+      "Environment variables",
+      "Production configuration",
+      "Linux / WSL",
+      "Git",
+      "Uvicorn",
+    ],
+  },
+];
+
+const experience = [
+  {
+    role: "Freelance Backend Developer",
+    company: "Fiverr",
+    period: "2025-Present",
+    details:
+      "Building Python automation scripts, API integrations, Excel exports, Mail Merge-ready datasets, and operations tooling for external clients.",
+  },
+  {
+    role: "BSc Computer Science",
+    company: "Leiden University",
+    period: "2025-Present",
+    details:
+      "Studying computer science while applying backend, database, algorithm, and systems concepts in practical projects.",
   },
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-100">
-      <section className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-20">
-        <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-zinc-400">
-          Python Backend Developer
-        </p>
-
-        <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
+    <main className="min-h-screen bg-[#f5f7fb] text-zinc-950">
+      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+        <Link href="/" className="text-sm font-semibold text-zinc-950">
           Mohamed Azahrioui
-        </h1>
+        </Link>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-          Computer Science student at Leiden University focused on backend
-          development, REST APIs, databases, automation, and algorithmic problem
-          solving.
-        </p>
-
-        <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-400">
-          I build and fix small Python backends: FastAPI and Flask APIs,
-          authentication, database logic, CSV pipelines, and backend bugs.
-        </p>
-
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href="mailto:mohamedazahrioui2006@gmail.com"
-            className="rounded-full bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
-          >
-            Contact me
+        <nav className="hidden items-center gap-6 text-sm text-zinc-600 sm:flex">
+          <a className="transition hover:text-zinc-950" href="#work">
+            Work
           </a>
-
-          <a
-            href="https://github.com/MoAz06"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full border border-zinc-700 px-5 py-3 text-sm font-medium text-white transition hover:border-zinc-400"
-          >
-            GitHub
+          <a className="transition hover:text-zinc-950" href="#experience">
+            Experience
           </a>
+          <a className="transition hover:text-zinc-950" href="#contact">
+            Contact
+          </a>
+        </nav>
+      </header>
+
+      <section className="mx-auto grid max-w-6xl gap-10 px-6 pb-16 pt-8 lg:min-h-[78vh] lg:grid-cols-[1.12fr_0.88fr] lg:items-center">
+        <div>
+          <p className="inline-flex rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-sm font-medium text-sky-800">
+            Backend Developer | Computer Science student
+          </p>
+
+          <h1 className="mt-6 max-w-3xl text-5xl font-semibold leading-[1.04] text-zinc-950 md:text-7xl">
+            Mohamed Azahrioui
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-xl leading-8 text-zinc-700">
+            I build Python APIs, automation tools, and data workflows for real
+            users, with a focus on reliable backends and practical business
+            logic.
+          </p>
+
+          <p className="mt-4 max-w-2xl leading-7 text-zinc-600">
+            Recent work includes e-commerce order processing, DPD Excel exports,
+            Mail Merge datasets, FastAPI services, PostgreSQL models, and
+            production-ready configuration.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="mailto:mohamedazahrioui2006@gmail.com"
+              className="rounded-md bg-zinc-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
+            >
+              Contact me
+            </a>
+
+            <a
+              href="/MohamedCV_backend_developer.pdf"
+              download
+              className="rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:border-zinc-500"
+            >
+              Download CV
+            </a>
+
+            <a
+              href="https://github.com/MoAz06"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-950 transition hover:border-zinc-500"
+            >
+              GitHub
+            </a>
+          </div>
+
+          <dl className="mt-10 grid max-w-2xl grid-cols-1 border-y border-zinc-200 text-sm sm:grid-cols-3">
+            <div className="py-4 sm:pr-6">
+              <dt className="font-medium text-zinc-500">Location</dt>
+              <dd className="mt-1 font-semibold text-zinc-950">
+                The Hague, NL
+              </dd>
+            </div>
+            <div className="border-t border-zinc-200 py-4 sm:border-l sm:border-t-0 sm:px-6">
+              <dt className="font-medium text-zinc-500">Current</dt>
+              <dd className="mt-1 font-semibold text-zinc-950">
+                Fiverr freelance
+              </dd>
+            </div>
+            <div className="border-t border-zinc-200 py-4 sm:border-l sm:border-t-0 sm:pl-6">
+              <dt className="font-medium text-zinc-500">Study</dt>
+              <dd className="mt-1 font-semibold text-zinc-950">
+                Leiden CS
+              </dd>
+            </div>
+          </dl>
         </div>
+
+        <aside className="rounded-lg border border-zinc-200 bg-white p-4 shadow-sm">
+          <div className="grid gap-4 sm:grid-cols-[160px_1fr] lg:grid-cols-1">
+            <Image
+              src="https://github.com/MoAz06.png?size=320"
+              alt="Mohamed Azahrioui"
+              width={320}
+              height={320}
+              priority
+              sizes="(min-width: 1024px) 360px, (min-width: 640px) 160px, 100vw"
+              className="aspect-square w-full rounded-lg object-cover"
+            />
+
+            <div className="rounded-lg bg-zinc-950 p-5 text-white">
+              <p className="text-sm text-zinc-300">Current focus</p>
+              <h2 className="mt-3 text-2xl font-semibold">
+                Backend work that survives real operations.
+              </h2>
+              <p className="mt-4 text-sm leading-6 text-zinc-300">
+                APIs, exports, local persistence, and automation that match how
+                people actually work day to day.
+              </p>
+            </div>
+          </div>
+        </aside>
       </section>
 
-      <section className="border-t border-zinc-800 px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white">
-            What I can help with
-          </h2>
+      <section className="border-y border-zinc-200 bg-white px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium text-sky-800">What I work on</p>
+            <h2 className="mt-3 text-3xl font-semibold text-zinc-950">
+              Practical backend help for APIs, exports, and internal tools.
+            </h2>
+          </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6"
+            {focusAreas.map((area) => (
+              <article
+                key={area.title}
+                className="rounded-lg border border-zinc-200 bg-[#f8fafc] p-6"
               >
-                <h3 className="font-semibold text-white">{service.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-400">
-                  {service.description}
+                <h3 className="text-lg font-semibold text-zinc-950">
+                  {area.title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-zinc-600">
+                  {area.description}
                 </p>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-t border-zinc-800 px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white">Projects</h2>
+      <section id="work" className="px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm font-medium text-sky-800">Selected work</p>
+              <h2 className="mt-3 text-3xl font-semibold text-zinc-950">
+                Projects with backend substance.
+              </h2>
+            </div>
+            <p className="max-w-xl text-sm leading-6 text-zinc-600">
+              A mix of client automation, API design, realtime backend work,
+              data processing, and algorithmic problem solving.
+            </p>
+          </div>
 
           <div className="mt-8 grid gap-5">
             {projects.map((project) => (
               <Link
                 key={project.slug}
                 href={`/projects/${project.slug}`}
-                className="block rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 transition hover:border-zinc-500"
+                className="group grid gap-5 rounded-lg border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-sky-300 md:grid-cols-[1.2fr_0.8fr]"
               >
-                <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">
-                      {project.title}
-                    </h3>
-                    <p className="mt-1 text-sm text-zinc-500">
-                      {project.year}
-                    </p>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2 text-sm text-zinc-500">
+                    <span>{project.type}</span>
+                    <span aria-hidden="true">/</span>
+                    <span>{project.year}</span>
                   </div>
-
-                  <span className="text-sm text-zinc-500">
-                    View case study →
-                  </span>
+                  <h3 className="mt-3 text-2xl font-semibold text-zinc-950">
+                    {project.title}
+                  </h3>
+                  <p className="mt-3 max-w-3xl leading-7 text-zinc-600">
+                    {project.description}
+                  </p>
                 </div>
 
-                <p className="mt-3 max-w-3xl text-sm leading-6 text-zinc-400">
-                  {project.description}
-                </p>
+                <div className="flex flex-col justify-between gap-5">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.slice(0, 6).map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-md border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-medium text-zinc-700"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
 
-                <p className="mt-3 max-w-4xl text-sm leading-6 text-zinc-300">
-                  Built features: {project.builtFeatures.slice(0, 4).join(", ")}.
-                </p>
-
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tech.slice(0, 8).map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-300"
-                    >
-                      {item}
-                    </span>
-                  ))}
+                  <span className="text-sm font-medium text-sky-800 transition group-hover:text-sky-600">
+                    View case study
+                  </span>
                 </div>
               </Link>
             ))}
@@ -155,57 +284,105 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-zinc-800 px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-semibold text-white">Skills</h2>
+      <section className="border-y border-zinc-200 bg-white px-6 py-20">
+        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+          <div>
+            <p className="text-sm font-medium text-sky-800">Skills</p>
+            <h2 className="mt-3 text-3xl font-semibold text-zinc-950">
+              Tools I use to ship backend work.
+            </h2>
+            <p className="mt-4 leading-7 text-zinc-600">
+              The stack is centered on Python, databases, automation, and
+              production-minded configuration.
+            </p>
+          </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full bg-zinc-900 px-4 py-2 text-sm text-zinc-300"
+          <div className="grid gap-4 md:grid-cols-2">
+            {skillGroups.map((group) => (
+              <section
+                key={group.title}
+                className="rounded-lg border border-zinc-200 bg-[#f8fafc] p-5"
               >
-                {skill}
-              </span>
+                <h3 className="font-semibold text-zinc-950">{group.title}</h3>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-md bg-white px-3 py-1 text-sm text-zinc-700"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </section>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-t border-zinc-800 px-6 py-20">
-        <div className="mx-auto max-w-5xl rounded-3xl border border-zinc-800 bg-zinc-900/60 p-8 md:p-10">
-          <h2 className="text-3xl font-semibold text-white">
-            Need a Python backend or API fixed?
+      <section id="experience" className="px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-medium text-sky-800">Experience</p>
+          <h2 className="mt-3 text-3xl font-semibold text-zinc-950">
+            Current work and education.
           </h2>
 
-          <p className="mt-4 max-w-2xl leading-7 text-zinc-400">
-            Send me the issue, feature request, or API idea. I can help with
-            Flask, FastAPI, PostgreSQL, authentication, backend bugs, and small
-            automation scripts.
-          </p>
+          <div className="mt-8 divide-y divide-zinc-200 rounded-lg border border-zinc-200 bg-white">
+            {experience.map((item) => (
+              <article
+                key={`${item.role}-${item.company}`}
+                className="grid gap-4 p-6 md:grid-cols-[0.75fr_1.25fr]"
+              >
+                <div>
+                  <h3 className="font-semibold text-zinc-950">{item.role}</h3>
+                  <p className="mt-1 text-sm text-zinc-500">
+                    {item.company} | {item.period}
+                  </p>
+                </div>
+                <p className="leading-7 text-zinc-600">{item.details}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+      <section
+        id="contact"
+        className="border-t border-zinc-800 bg-zinc-950 px-6 py-20 text-white"
+      >
+        <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-sm font-medium text-sky-300">Available for work</p>
+            <h2 className="mt-3 max-w-2xl text-3xl font-semibold">
+              Need a Python backend, export workflow, or API integration built?
+            </h2>
+            <p className="mt-4 max-w-2xl leading-7 text-zinc-300">
+              Send me the issue, workflow, or API idea. I can help shape it into
+              a maintainable backend system.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-3">
             <a
               href="mailto:mohamedazahrioui2006@gmail.com"
-              className="rounded-full bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
+              className="rounded-md bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
             >
               Send an email
             </a>
-
             <a
-              href="https://github.com/MoAz06"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-zinc-700 px-5 py-3 text-sm font-medium text-white transition hover:border-zinc-400"
+              href="/MohamedCV_backend_developer.pdf"
+              download
+              className="rounded-md border border-zinc-700 px-5 py-3 text-sm font-medium text-white transition hover:border-zinc-400"
             >
-              View GitHub
+              Download CV
             </a>
           </div>
         </div>
       </section>
 
-      <footer className="border-t border-zinc-800 px-6 py-8 text-center text-sm text-zinc-500">
-        © 2026 Mohamed Azahrioui. Built with Next.js and deployed on Vercel.
+      <footer className="bg-zinc-950 px-6 py-8 text-center text-sm text-zinc-500">
+        &copy; 2026 Mohamed Azahrioui. Built with Next.js and deployed on
+        Vercel.
       </footer>
     </main>
   );

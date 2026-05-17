@@ -33,66 +33,115 @@ export default async function ProjectPage({ params }) {
   }
 
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-100">
-      <section className="mx-auto max-w-5xl px-6 py-16">
+    <main className="min-h-screen bg-[#f5f7fb] text-zinc-950">
+      <section className="mx-auto max-w-6xl px-6 py-10">
         <Link
           href="/"
-          className="text-sm text-zinc-400 transition hover:text-white"
+          className="text-sm font-medium text-zinc-600 transition hover:text-zinc-950"
         >
-          ← Back to homepage
+          Back to homepage
         </Link>
 
-        <div className="mt-12">
-          <p className="text-sm uppercase tracking-[0.3em] text-zinc-500">
-            Project Case Study
-          </p>
+        <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+          <div>
+            <p className="inline-flex rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-sm font-medium text-sky-800">
+              {project.type} | {project.year}
+            </p>
 
-          <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
-            {project.title}
-          </h1>
+            <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[1.04] text-zinc-950 md:text-7xl">
+              {project.title}
+            </h1>
 
-          <p className="mt-4 text-sm text-zinc-500">{project.year}</p>
+            <p className="mt-6 max-w-3xl text-xl leading-8 text-zinc-700">
+              {project.description}
+            </p>
+          </div>
 
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-            {project.description}
-          </p>
+          <div className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
+            <h2 className="text-lg font-semibold text-zinc-950">
+              Project snapshot
+            </h2>
+            <dl className="mt-5 grid gap-4 text-sm">
+              <div>
+                <dt className="font-medium text-zinc-500">Type</dt>
+                <dd className="mt-1 font-semibold text-zinc-950">
+                  {project.type}
+                </dd>
+              </div>
+              <div>
+                <dt className="font-medium text-zinc-500">Period</dt>
+                <dd className="mt-1 font-semibold text-zinc-950">
+                  {project.year}
+                </dd>
+              </div>
+              <div>
+                <dt className="font-medium text-zinc-500">Source</dt>
+                <dd className="mt-1 font-semibold text-zinc-950">
+                  {project.github ? "Public GitHub repository" : project.repoLabel}
+                </dd>
+              </div>
+            </dl>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
-            >
-              View GitHub repository
-            </a>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-md bg-zinc-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
+                >
+                  View repository
+                </a>
+              )}
 
-            <Link
-              href="/"
-              className="rounded-full border border-zinc-700 px-5 py-3 text-sm font-medium text-white transition hover:border-zinc-400"
-            >
-              View all projects
-            </Link>
+              <Link
+                href="/#work"
+                className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-950 transition hover:border-zinc-500"
+              >
+                View all work
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="border-t border-zinc-800 px-6 py-16">
-        <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-[1fr_2fr]">
-          <h2 className="text-2xl font-semibold text-white">Problem</h2>
-          <p className="leading-7 text-zinc-400">{project.problem}</p>
+      <section className="border-y border-zinc-200 bg-white px-6 py-16">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-[0.75fr_1.25fr]">
+          <h2 className="text-2xl font-semibold text-zinc-950">Problem</h2>
+          <p className="max-w-3xl leading-7 text-zinc-600">
+            {project.problem}
+          </p>
         </div>
       </section>
 
-      <section className="border-t border-zinc-800 px-6 py-16">
-        <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-[1fr_2fr]">
-          <h2 className="text-2xl font-semibold text-white">What I built</h2>
+      {project.outcomes?.length > 0 && (
+        <section className="px-6 py-16">
+          <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-[0.75fr_1.25fr]">
+            <h2 className="text-2xl font-semibold text-zinc-950">Outcomes</h2>
 
-          <div className="grid gap-3">
+            <div className="grid gap-3 md:grid-cols-3">
+              {project.outcomes.map((outcome) => (
+                <div
+                  key={outcome}
+                  className="rounded-lg border border-zinc-200 bg-white p-4 text-sm leading-6 text-zinc-700 shadow-sm"
+                >
+                  {outcome}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="border-y border-zinc-200 bg-white px-6 py-16">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-[0.75fr_1.25fr]">
+          <h2 className="text-2xl font-semibold text-zinc-950">What I built</h2>
+
+          <div className="grid gap-3 md:grid-cols-2">
             {project.builtFeatures.map((feature) => (
               <div
                 key={feature}
-                className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4 text-sm leading-6 text-zinc-300"
+                className="rounded-lg border border-zinc-200 bg-[#f8fafc] p-4 text-sm leading-6 text-zinc-700"
               >
                 {feature}
               </div>
@@ -102,17 +151,17 @@ export default async function ProjectPage({ params }) {
       </section>
 
       {project.endpoints.length > 0 && (
-        <section className="border-t border-zinc-800 px-6 py-16">
-          <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-[1fr_2fr]">
-            <h2 className="text-2xl font-semibold text-white">
+        <section className="px-6 py-16">
+          <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-[0.75fr_1.25fr]">
+            <h2 className="text-2xl font-semibold text-zinc-950">
               Example endpoints
             </h2>
 
-            <div className="grid gap-3">
+            <div className="grid gap-3 md:grid-cols-2">
               {project.endpoints.map((endpoint) => (
                 <code
                   key={endpoint}
-                  className="rounded-xl border border-zinc-800 bg-black px-4 py-3 text-sm text-zinc-300"
+                  className="rounded-lg border border-zinc-200 bg-zinc-950 px-4 py-3 text-sm text-zinc-100"
                 >
                   {endpoint}
                 </code>
@@ -122,15 +171,15 @@ export default async function ProjectPage({ params }) {
         </section>
       )}
 
-      <section className="border-t border-zinc-800 px-6 py-16">
-        <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-[1fr_2fr]">
-          <h2 className="text-2xl font-semibold text-white">Tech stack</h2>
+      <section className="border-y border-zinc-200 bg-white px-6 py-16">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-[0.75fr_1.25fr]">
+          <h2 className="text-2xl font-semibold text-zinc-950">Tech stack</h2>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2">
             {project.tech.map((item) => (
               <span
                 key={item}
-                className="rounded-full border border-zinc-700 px-4 py-2 text-sm text-zinc-300"
+                className="rounded-md border border-zinc-200 bg-[#f8fafc] px-3 py-2 text-sm font-medium text-zinc-700"
               >
                 {item}
               </span>
@@ -139,25 +188,36 @@ export default async function ProjectPage({ params }) {
         </div>
       </section>
 
-      <section className="border-t border-zinc-800 px-6 py-16">
-        <div className="mx-auto max-w-5xl rounded-3xl border border-zinc-800 bg-zinc-900/60 p-8 md:p-10">
-          <h2 className="text-3xl font-semibold text-white">
-            View the source code
-          </h2>
+      <section className="bg-zinc-950 px-6 py-16 text-white">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 className="text-3xl font-semibold">
+              {project.github ? "View the source code" : "Private client work"}
+            </h2>
+            <p className="mt-4 max-w-2xl leading-7 text-zinc-300">
+              {project.github
+                ? "The repository includes the code, structure, and implementation details for this project."
+                : "This project is described as a case study because the client implementation is not published as a public repository."}
+            </p>
+          </div>
 
-          <p className="mt-4 max-w-2xl leading-7 text-zinc-400">
-            The full repository is available on GitHub, including the code,
-            structure, and implementation details.
-          </p>
-
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-8 inline-block rounded-full bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
-          >
-            Open repository
-          </a>
+          {project.github ? (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex rounded-md bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
+            >
+              Open repository
+            </a>
+          ) : (
+            <Link
+              href="/#contact"
+              className="inline-flex rounded-md bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
+            >
+              Discuss similar work
+            </Link>
+          )}
         </div>
       </section>
     </main>
