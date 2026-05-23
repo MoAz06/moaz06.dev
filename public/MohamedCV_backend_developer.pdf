@@ -1,17 +1,51 @@
 %PDF-1.4
-%“Œ‹ž
+%âãÏÓ
 1 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+<<
+/Producer (pypdf)
+>>
 endobj
 2 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+<<
+/Type /Pages
+/Count 1
+/Kids [ 4 0 R ]
+>>
 endobj
 3 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
 endobj
 4 0 obj
-<< /Length 7707 >>
+<<
+/Type /Page
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Contents 5 0 R
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 7 0 R
+/F1-1 8 0 R
+/F2 9 0 R
+/F2-0 10 0 R
+/F3 11 0 R
+/F3-0 12 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+5 0 obj
+<<
+/Length 8824
+>>
 stream
+q
+q
 0.105 0.227 0.361 rg
 0.00 737.89 595.28 104.00 re f
 1.000 1.000 1.000 rg
@@ -136,29 +170,207 @@ BT /F1 7.95 Tf 9.25 TL 1 0 0 1 168.00 305.89 Tm (Bol.com order processing, DPD s
 BT /F2 7.95 Tf 9.25 TL 1 0 0 1 48.00 295.54 Tm (Languages:) Tj ET
 0.000 0.000 0.000 rg
 BT /F1 7.95 Tf 9.25 TL 1 0 0 1 168.00 295.54 Tm (Dutch \(native\), English \(native\)) Tj ET
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.105 0.227 0.361 rg
+n
+430 748 200 11 re
+f*
+1 1 1 rg
+BT
+/F1-0 8.3 Tf
+9.96 TL
+ET
+BT
+1 0 0 1 386.0034 749.2 Tm
+(github\056com\057MoAz06  \174  moaz06\055dev\056vercel\056app) Tj
+T*
+ET
+Q
+
+
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-1 12 Tf
+14.4 TL
+ET
+BT
+/F2-0 9.7 Tf
+11.64 TL
+ET
+0.18 0.43 0.65 rg
+BT
+1 0 0 1 48 275 Tm
+(CERTIFICATIONS) Tj
+T*
+ET
+0.18 0.43 0.65 RG
+0.5 w
+n
+48 272 m
+547.28 272 l
+S
+BT
+/F2-0 8.8 Tf
+10.56 TL
+ET
+0 0 0 rg
+BT
+1 0 0 1 48 255 Tm
+(Software Engineer) Tj
+T*
+ET
+BT
+/F3-0 8.3 Tf
+9.96 TL
+ET
+0.4 0.4 0.4 rg
+BT
+1 0 0 1 528.8208 255 Tm
+(2026) Tj
+T*
+ET
+BT
+/F1-1 8.35 Tf
+10.02 TL
+ET
+0.4 0.4 0.4 rg
+BT
+1 0 0 1 48 243 Tm
+(HackerRank  \227  Verified Skill Certificate) Tj
+T*
+ET
+BT
+/F1-1 8.35 Tf
+10.02 TL
+ET
+0 0 0 rg
+BT
+1 0 0 1 48 231 Tm
+(\055) Tj
+T*
+ET
+BT
+1 0 0 1 57 231 Tm
+(Covers Problem Solving\054 SQL\054 and REST API) Tj
+T*
+ET
+BT
+/F1-1 8.35 Tf
+10.02 TL
+ET
+0 0 0 rg
+BT
+1 0 0 1 48 220 Tm
+(\055) Tj
+T*
+ET
+BT
+1 0 0 1 57 220 Tm
+(Verification\072 hackerrank\056com\057certificates\057aa7ff827587a) Tj
+T*
+ET
+Q
+
+
 endstream
 endobj
-5 0 obj
-<< /Type /Page /Parent 6 0 R /MediaBox [0 0 595.2756 841.8898] /Contents 4 0 R /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> >>
-endobj
 6 0 obj
-<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+>>
 endobj
 7 0 obj
-<< /Type /Catalog /Pages 6 0 R >>
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+8 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+10 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Oblique
+/Encoding /WinAnsiEncoding
+>>
+endobj
+12 0 obj
+<<
+/BaseFont /Helvetica-Oblique
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
+>>
 endobj
 xref
-0 8
+0 13
 0000000000 65535 f 
 0000000015 00000 n 
-0000000112 00000 n 
-0000000214 00000 n 
-0000000319 00000 n 
-0000008078 00000 n 
-0000008234 00000 n 
-0000008291 00000 n 
+0000000054 00000 n 
+0000000113 00000 n 
+0000000162 00000 n 
+0000000431 00000 n 
+0000009307 00000 n 
+0000009404 00000 n 
+0000009511 00000 n 
+0000009618 00000 n 
+0000009720 00000 n 
+0000009833 00000 n 
+0000009939 00000 n 
 trailer
-<< /Size 8 /Root 7 0 R >>
+<<
+/Size 13
+/Root 3 0 R
+/Info 1 0 R
+>>
 startxref
-8340
+10055
 %%EOF

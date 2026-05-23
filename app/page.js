@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { certifications } from "./data/certifications";
 import { projects } from "./data/projects";
 
 const focusAreas = [
@@ -93,6 +94,9 @@ export default function Home() {
         <nav className="hidden items-center gap-6 text-sm text-zinc-600 sm:flex">
           <a className="transition hover:text-zinc-950" href="#work">
             Work
+          </a>
+          <a className="transition hover:text-zinc-950" href="#certifications">
+            Certifications
           </a>
           <a className="transition hover:text-zinc-950" href="#experience">
             Experience
@@ -279,6 +283,95 @@ export default function Home() {
                   </span>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="certifications"
+        className="border-y border-zinc-200 bg-white px-6 py-20"
+      >
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm font-medium text-sky-800">
+                Certifications
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold text-zinc-950">
+                Verified credentials I can build on.
+              </h2>
+            </div>
+            <p className="max-w-xl text-sm leading-6 text-zinc-600">
+              Current certifications and future credentials collected in one
+              place, with verification links where available.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-5">
+            {certifications.map((certification) => (
+              <article
+                key={certification.credentialId}
+                className="grid gap-5 rounded-lg border border-zinc-200 bg-[#f8fafc] p-4 shadow-sm md:grid-cols-[0.95fr_1.05fr] md:p-6"
+              >
+                <a
+                  href={certification.verificationUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group block overflow-hidden rounded-lg border border-zinc-200 bg-white"
+                >
+                  <Image
+                    src={certification.image}
+                    alt={`${certification.issuer} ${certification.title} certificate`}
+                    width={1600}
+                    height={1200}
+                    sizes="(min-width: 768px) 520px, 100vw"
+                    className="aspect-[4/3] w-full object-cover transition group-hover:scale-[1.01]"
+                  />
+                </a>
+
+                <div className="flex flex-col justify-between gap-6">
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2 text-sm text-zinc-500">
+                      <span>{certification.issuer}</span>
+                      <span aria-hidden="true">/</span>
+                      <span>{certification.issued}</span>
+                    </div>
+
+                    <h3 className="mt-3 text-2xl font-semibold text-zinc-950">
+                      {certification.title}
+                    </h3>
+
+                    <p className="mt-3 leading-7 text-zinc-600">
+                      {certification.description}
+                    </p>
+
+                    <p className="mt-3 text-sm text-zinc-500">
+                      Credential ID: {certification.credentialId}
+                    </p>
+
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {certification.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="rounded-md border border-zinc-200 bg-white px-3 py-1 text-xs font-medium text-zinc-700"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <a
+                    href={certification.verificationUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex w-fit rounded-md bg-zinc-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
+                  >
+                    Verify certificate
+                  </a>
+                </div>
+              </article>
             ))}
           </div>
         </div>
