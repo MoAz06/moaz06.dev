@@ -12,25 +12,26 @@ const focusAreas = [
   {
     title: "Automation tools",
     description:
-      "Python workflows for exports, order processing, Mail Merge datasets, CSV ingestion, and repeatable operations.",
+      "Python and Node workflows for exports, agent guardrails, RAG systems, cloud integrations, and repeatable operations.",
   },
   {
     title: "Data workflows",
     description:
-      "SQLite and PostgreSQL backed pipelines that keep business rules explicit and production behavior predictable.",
+      "PostgreSQL, SQLite, BigQuery, and Azure-backed systems that keep business rules explicit and production behavior predictable.",
   },
 ];
 
 const skillGroups = [
   {
     title: "Programming",
-    items: ["Python", "C++", "SQL", "Bash"],
+    items: ["Python", "JavaScript / Node.js", "TypeScript", "C++", "SQL", "Bash"],
   },
   {
     title: "Backend and APIs",
     items: [
       "FastAPI",
       "Flask",
+      "Node.js",
       "REST APIs",
       "API integrations",
       "JWT",
@@ -38,6 +39,7 @@ const skillGroups = [
       "bcrypt",
       "Swagger / OpenAPI",
       "Postman",
+      "WebSockets",
     ],
   },
   {
@@ -45,22 +47,32 @@ const skillGroups = [
     items: [
       "PostgreSQL",
       "SQLite",
+      "BigQuery",
       "SQLAlchemy ORM",
       "openpyxl",
       "Excel generation",
       "Mail Merge",
       "CSV ingestion",
       "Business rule logic",
+      "Fivetran",
     ],
   },
   {
     title: "Deployment and tools",
     items: [
+      "Azure App Service",
+      "Azure AI Search",
+      "Azure Blob Storage",
+      "Azure OpenAI",
+      "Google Cloud Run",
+      "Docker",
       "Railway",
       "Environment variables",
       "Production configuration",
       "Linux / WSL",
       "Git",
+      "GitLab CI/CD",
+      "pytest",
       "Uvicorn",
     ],
   },
@@ -68,11 +80,25 @@ const skillGroups = [
 
 const experience = [
   {
-    role: "Freelance Backend Developer",
-    company: "Fiverr",
+    role: "Software Developer",
+    company: "CodeHive",
+    period: "June 2026-Present",
+    details:
+      "Working on MHPoly, an Azure-based RAG knowledge base with Azure AI Search, Blob Storage, Azure OpenAI, App Service configuration, source references, and highlighted supporting passages.",
+  },
+  {
+    role: "Backend Developer",
+    company: "Kojac",
+    period: "April 2026-Present",
+    details:
+      "Building backend and frontend pieces on live client products with a senior team, connecting services, APIs, and responsive interfaces while studying full-time.",
+  },
+  {
+    role: "Backend Developer",
+    company: "External clients",
     period: "2025-Present",
     details:
-      "Building Python automation scripts, API integrations, Excel exports, Mail Merge-ready datasets, and operations tooling for external clients.",
+      "Freelance production work across bol.com/DPD automation, FastAPI auth, invoice risk rules, data pipelines, and C++ projects.",
   },
   {
     role: "BSc Computer Science",
@@ -110,7 +136,7 @@ export default function Home() {
       <section className="mx-auto grid max-w-6xl gap-10 px-6 pb-16 pt-8 lg:min-h-[78vh] lg:grid-cols-[1.12fr_0.88fr] lg:items-center">
         <div>
           <p className="inline-flex rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-sm font-medium text-sky-800">
-            Backend Developer | Computer Science student
+            Software Developer | Backend Developer | CS student
           </p>
 
           <h1 className="mt-6 max-w-3xl text-5xl font-semibold leading-[1.04] text-zinc-950 md:text-7xl">
@@ -118,15 +144,15 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-xl leading-8 text-zinc-700">
-            I build Python APIs, automation tools, and data workflows for real
-            users, with a focus on reliable backends and practical business
-            logic.
+            I build backend systems, AI-agent guardrails, RAG workflows,
+            and cloud-connected tools with a focus on auditable logic and
+            production behavior.
           </p>
 
           <p className="mt-4 max-w-2xl leading-7 text-zinc-600">
-            Recent work includes e-commerce order processing, DPD Excel exports,
-            Mail Merge datasets, FastAPI services, PostgreSQL models, and
-            production-ready configuration.
+            Recent work includes CodeHive&apos;s Azure RAG knowledge base, Kojac
+            client products, ReachGate vulnerability triage, TrustGate runtime
+            authorization, and production automation for external clients.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -165,7 +191,7 @@ export default function Home() {
             <div className="border-t border-zinc-200 py-4 sm:border-l sm:border-t-0 sm:px-6">
               <dt className="font-medium text-zinc-500">Current</dt>
               <dd className="mt-1 font-semibold text-zinc-950">
-                Fiverr freelance
+                CodeHive + Kojac
               </dd>
             </div>
             <div className="border-t border-zinc-200 py-4 sm:border-l sm:border-t-0 sm:pl-6">
@@ -208,7 +234,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <p className="text-sm font-medium text-sky-800">What I work on</p>
             <h2 className="mt-3 text-3xl font-semibold text-zinc-950">
-              Practical backend help for APIs, exports, and internal tools.
+              Practical backend help for APIs, agent guardrails, RAG, and internal tools.
             </h2>
           </div>
 
@@ -240,8 +266,8 @@ export default function Home() {
               </h2>
             </div>
             <p className="max-w-xl text-sm leading-6 text-zinc-600">
-              A mix of client automation, API design, realtime backend work,
-              data processing, and algorithmic problem solving.
+              A mix of AI security, runtime authorization, client automation,
+              API design, realtime backend work, and algorithmic problem solving.
             </p>
           </div>
 
@@ -314,21 +340,37 @@ export default function Home() {
                 key={certification.credentialId}
                 className="grid gap-5 rounded-lg border border-zinc-200 bg-[#f8fafc] p-4 shadow-sm md:grid-cols-[0.95fr_1.05fr] md:p-6"
               >
-                <a
-                  href={certification.verificationUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group block overflow-hidden rounded-lg border border-zinc-200 bg-white"
-                >
-                  <Image
-                    src={certification.image}
-                    alt={`${certification.issuer} ${certification.title} certificate`}
-                    width={1600}
-                    height={1200}
-                    sizes="(min-width: 768px) 520px, 100vw"
-                    className="aspect-[4/3] w-full object-cover transition group-hover:scale-[1.01]"
-                  />
-                </a>
+                {certification.image ? (
+                  <a
+                    href={certification.verificationUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group block overflow-hidden rounded-lg border border-zinc-200 bg-white"
+                  >
+                    <Image
+                      src={certification.image}
+                      alt={`${certification.issuer} ${certification.title} certificate`}
+                      width={1600}
+                      height={1200}
+                      sizes="(min-width: 768px) 520px, 100vw"
+                      className="aspect-[4/3] w-full object-cover transition group-hover:scale-[1.01]"
+                    />
+                  </a>
+                ) : (
+                  <div className="flex min-h-64 flex-col justify-between rounded-lg border border-zinc-200 bg-white p-6">
+                    <div>
+                      <p className="text-sm font-medium text-sky-800">
+                        Verified certificate
+                      </p>
+                      <h3 className="mt-4 text-3xl font-semibold text-zinc-950">
+                        {certification.title}
+                      </h3>
+                    </div>
+                    <p className="text-sm text-zinc-500">
+                      {certification.issuer} | {certification.year}
+                    </p>
+                  </div>
+                )}
 
                 <div className="flex flex-col justify-between gap-6">
                   <div>
@@ -447,11 +489,11 @@ export default function Home() {
           <div>
             <p className="text-sm font-medium text-sky-300">Available for work</p>
             <h2 className="mt-3 max-w-2xl text-3xl font-semibold">
-              Need a Python backend, export workflow, or API integration built?
+              Need a backend, RAG workflow, agent guardrail, or API integration built?
             </h2>
             <p className="mt-4 max-w-2xl leading-7 text-zinc-300">
               Send me the issue, workflow, or API idea. I can help shape it into
-              a maintainable backend system.
+              a maintainable system with explicit business rules and auditable behavior.
             </p>
           </div>
 

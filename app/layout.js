@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Mohamed Azahrioui | Python Backend Developer",
+  title: "Mohamed Azahrioui | Software & Backend Developer",
   description:
-    "Python backend developer and Computer Science student building APIs, automation tools, Excel exports, Mail Merge workflows, and certified software engineering foundations.",
+    "Software developer and Computer Science student building Python and Node backends, AI-agent guardrails, RAG systems, cloud workflows, and production automation.",
 };
 
 export default function RootLayout({ children }) {
