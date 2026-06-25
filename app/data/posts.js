@@ -136,7 +136,7 @@ export const posts = [
         items: [
           "TrustGate on GitHub: https://github.com/MoAz06/trustgate-ai-agents",
           "Microsoft Agent Governance Toolkit: https://github.com/microsoft/agent-governance-toolkit",
-          "GitHub Discussion on AGT: https://github.com/microsoft/agent-governance-toolkit/discussions",
+          "GitHub Discussion on AGT: https://github.com/microsoft/agent-governance-toolkit/discussions/3173",
         ],
       },
     ],

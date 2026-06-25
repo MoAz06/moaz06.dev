@@ -42,6 +42,26 @@ function formatDate(date) {
   }).format(new Date(date));
 }
 
+function LinkedText({ text }) {
+  const parts = text.split(/(https?:\/\/\S+)/g);
+
+  return parts.map((part) => {
+    if (!part.startsWith("http")) return part;
+
+    return (
+      <a
+        key={part}
+        href={part}
+        target="_blank"
+        rel="noreferrer"
+        className="font-medium text-sky-800 underline decoration-sky-200 underline-offset-4 transition hover:text-sky-600"
+      >
+        {part}
+      </a>
+    );
+  });
+}
+
 function PostSection({ section }) {
   if (section.type === "heading") {
     return (
@@ -52,7 +72,11 @@ function PostSection({ section }) {
   }
 
   if (section.type === "paragraph") {
-    return <p className="mt-5 leading-7 text-zinc-600">{section.text}</p>;
+    return (
+      <p className="mt-5 leading-7 text-zinc-600">
+        <LinkedText text={section.text} />
+      </p>
+    );
   }
 
   if (section.type === "list") {
@@ -63,7 +87,9 @@ function PostSection({ section }) {
             <span aria-hidden="true" className="text-sky-800">
               &bull;
             </span>
-            <span>{item}</span>
+            <span>
+              <LinkedText text={item} />
+            </span>
           </li>
         ))}
       </ul>
