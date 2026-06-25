@@ -117,7 +117,7 @@ export default function Home() {
           Mohamed Azahrioui
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm text-zinc-600 sm:flex">
+        <nav className="flex flex-wrap items-center gap-4 text-sm text-zinc-600 sm:gap-6">
           <a className="transition hover:text-zinc-950" href="#work">
             Work
           </a>
@@ -127,8 +127,19 @@ export default function Home() {
           <a className="transition hover:text-zinc-950" href="#experience">
             Experience
           </a>
+          <Link href="/writing" className="transition hover:text-zinc-950">
+            Writing
+          </Link>
           <a className="transition hover:text-zinc-950" href="#contact">
             Contact
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mohamed-azahrioui"
+            target="_blank"
+            rel="noreferrer"
+            className="transition hover:text-zinc-950"
+          >
+            LinkedIn
           </a>
         </nav>
       </header>
@@ -510,6 +521,14 @@ export default function Home() {
               className="rounded-md border border-zinc-700 px-5 py-3 text-sm font-medium text-white transition hover:border-zinc-400"
             >
               Download CV
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mohamed-azahrioui"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-md border border-zinc-700 px-5 py-3 text-sm font-medium text-white transition hover:border-zinc-400"
+            >
+              LinkedIn
             </a>
           </div>
         </div>

@@ -14,9 +14,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Mohamed Azahrioui | Software & Backend Developer",
+  title: "Mohamed Azahrioui",
   description:
-    "Software developer and Computer Science student building Python and Node backends, AI-agent guardrails, RAG systems, cloud workflows, and production automation.",
+    "Backend developer building AI-agent guardrails, RAG workflows, and cloud-connected tools with auditable logic.",
+  openGraph: {
+    siteName: "Mohamed Azahrioui",
+    url: "https://moaz06.dev",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
